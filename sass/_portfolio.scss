@@ -1,0 +1,34 @@
+@use 'colors' as c;
+@use 'variables' as v;
+
+.projects {
+    margin-top: 2rem;
+}
+
+
+.project-img img {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h2 {
+    @include v.headings;
+}
+
+p {
+    line-height: 30px;
+    font-size: 0.938rem;
+    color: c.$grayishDarkBlue;
+}
+
+.text {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(220, 220, 222, 1);
+    border-bottom: 1px solid rgba(220, 220, 222, 1);
+}
+
+.btn {
+    @include v.buttons;
+    width: 175px;
+    margin: 1.5rem 0;
+}

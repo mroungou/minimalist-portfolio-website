@@ -3,52 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | My Projects</title>
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <script src="../index.js" defer></script>
+  <title>Minimalist Portfolio</title>
 </head>
 <body>
-
-  Home
-  Portfolio
-  Contact Me
-
-  Manage
-
-  This project required me to build a fully responsive landing page to the designs provided. 
-  I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, 
-  such as the testimonial slider.
-
-  View Project
-
-  Bookmark
-
-  This project required me to build a fully responsive landing page to the designs provided. I 
-  used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such 
-  as the features section.
-
-  View Project
-
-  Insure
-
-  This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive 
-  landing page. The only JavaScript this project required was to enable the toggling of the 
-  mobile navigation.
-
-  View Project
-
-  Fylo
-
-  This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and 
-  built it so that it was fully-responsive. I took a mobile-first approach and used modern 
-  CSS like Flexbox and Grid for layout purposes.
-
-  View Project
-
-  Interested in doing a project together?
-
-  Contact Me
-
+    <main>
+        <nav class="nav">
+            <div class="logo"><img src="./images/logo.svg" alt="Logo"></div>
+            <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
+            <div class="close-menu mobile" id="close-menu"><img src="./images/icons/close.svg" alt="Close Menu"></div>
+              <div class="mobile overlay">
+                  <a href="./index.html">Home</a>
+                  <a href="./portfolio.html">Portfolio</a>
+                  <a href="./contact.html">Contact Me</a>
+              </div>
+            </nav>
+        <section class="projects">
+            <div class="manage project">
+                <div class="project-img">
+                    <img src="./images/detail/mobile/image-manage-preview-1@2x.jpg" alt="Manage Preview Image" class="mobile">
+                </div>
+                <div class="text">
+                    <h2>Manage</h2>
+                    <p>
+                        This project required me to build a fully responsive landing page to the designs provided.
+                        I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity,
+                        such as the testimonial slider.
+                    </p>
+                    <div class="btn"><a href="">View Project</a></div>
+                </div>
+            </div>
+            <div class="bookmark project">
+                <div class="project-img">
+                    <img src="./images/detail/mobile/image-bookmark-preview-1@2x.jpg" alt="Bookmark Preview Image" class="mobile">
+                </div>
+                <div class="text">
+                    <h2>Bookmark</h2>
+                    <p>
+                        This project required me to build a fully responsive landing page to the designs provided. I
+                        used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such
+                        as the features section.
+                    </p>
+                    <div class="btn"><a href="">View Project</a></div>
+                </div>
+            </div>
+            <div class="insure project">
+                <div class="text">
+                    <div class="project-img">
+                        <img src="./images/detail/mobile/image-insure-preview-1@2x.jpg" alt="Insure Preview Image" class="mobile">
+                    </div>
+                    <h2>Insure</h2>
+                    <p>
+                        This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive
+                        landing page. The only JavaScript this project required was to enable the toggling of the
+                        mobile navigation.
+                    </p>
+                    <div class="btn"><a href="">View Project</a></div>
+                </div>
+            </div>
+            <div class="fylo project">
+                <div class="project-img">
+                    <img src="./images/detail/mobile/image-fylo-preview-1@2x.jpg" alt="Fylo Preview Image" class="mobile">
+                </div>
+                <div class="text">
+                    <h2>Fylo</h2>
+                    <p>
+                        This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and
+                        built it so that it was fully-responsive. I took a mobile-first approach and used modern
+                        CSS like Flexbox and Grid for layout purposes.
+                    </p>
+                    <div class="btn"><a href="">View Project</a></div>
+                </div>
+            </div>
+        </section>
+        <section class="collab">
+            <h3>Interested in doing a project together?</h3>
+            <div class="btn"><a href="./contact.html">Contact Me</a></div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="./images/logo-white.svg" alt="Logo">
+        </div>
+        <div class="links">
+            <a href="./index.html">Home</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./portfolio.html">Portfolio</a>
+        </div>
+        <div class="socials">
+            <div class="git"><img src="./images/icons/git-white.svg" alt="Github"></div>
+            <div class="twitter"><img src="./images/icons/twitter-white.svg" alt="Twitter"></div>
+            <div class="linkedin"><img src="./images/icons/linkedin-white.svg" alt="LinkedIn"></div>
+        </div>
+    </footer>
 </body>
 </html>
