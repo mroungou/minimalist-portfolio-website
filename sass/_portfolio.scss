@@ -5,6 +5,11 @@
     margin-top: 2rem;
 }
 
+// this targets all the div elements that are children of the projects div except the first one
+.project:not(:first-child) {
+    margin-top: 4rem;
+}
+
 
 .project-img img {
     box-sizing: border-box;
@@ -16,9 +21,7 @@ h2 {
 }
 
 p {
-    line-height: 30px;
-    font-size: 0.938rem;
-    color: c.$grayishDarkBlue;
+   @include v.paragraphs;
 }
 
 .text {

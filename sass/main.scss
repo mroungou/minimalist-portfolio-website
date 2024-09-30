@@ -2,6 +2,7 @@
 @use 'colors' as c;
 @use 'font';
 @use 'portfolio';
+@use 'contact';
 
 body {
     font-family: "Public Sans", sans-serif;
@@ -18,6 +19,7 @@ main {
 nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    position: relative;
 
     #menu-btn {
         margin-left: auto;
@@ -33,6 +35,24 @@ nav {
     // mobile hidden by default
     .overlay {
         display: none;
+        background: c.$grayishDarkBlue;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 2rem;
+        padding: 2.5rem 2rem;
+        box-sizing: border-box;
+        width: 70%;
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        a,a:visited {
+            text-transform: uppercase;
+            font-size: .75rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+        }
     }
 }
 
@@ -142,12 +162,12 @@ footer {
     }
 
     .socials {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 30%;
+        @include v.socials;
         margin: auto;
     }
 }
 
 
+.active {
+    display: flex;
+}

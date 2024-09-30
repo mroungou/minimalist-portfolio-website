@@ -22,3 +22,17 @@
         text-decoration: none;
     }
 }
+
+@mixin paragraphs {
+    line-height: 30px;
+    font-size: 0.938rem;
+    color: c.$grayishDarkBlue;
+    font-weight: 400;
+}
+
+@mixin socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
