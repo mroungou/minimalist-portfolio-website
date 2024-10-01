@@ -21,18 +21,18 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     position: relative;
 
-    #menu-btn {
+    .mobile-menu {
+        display: flex;
+        align-items: center;
         margin-left: auto;
-        align-self: center;
     }
     // close menu btn hidden buy default
-    #close-menu {
+    #close-btn {
         display: none;
-        margin-left: auto;
-        align-self: center;
     }
 
     // mobile hidden by default
+   
     .overlay {
         display: none;
         background: c.$grayishDarkBlue;
@@ -56,72 +56,73 @@ nav {
     }
 }
 
-.hero {
-    margin-top: 2.5rem;
-
-    h1 {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        @include v.headings;
-    }
-
-    .hero-img img{
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    .btn {
-        font-size: .75rem;
-        text-transform: uppercase;
-        color: c.$veryLightGrey;
-        letter-spacing: 2px;
-        display: flex;
-        align-items: center;
-        background: rgba(32, 58, 76, 1);
-        width: 200px;
-
-        .btn-text {
-            margin: 0 auto;
+body.index {
+    .hero {
+        margin-top: 2.5rem;
+    
+        h1 {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            @include v.headings;
         }
-
-        .img {
-            background: rgba(0, 0, 0, 1);
-            padding: .85rem 1rem;
+    
+        .hero-img img{
+            box-sizing: border-box;
+            width: 100%;
+        }
+    
+        .btn {
+            font-size: .75rem;
+            text-transform: uppercase;
+            color: c.$veryLightGrey;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            background: rgba(32, 58, 76, 1);
+            width: 200px;
+    
+            .btn-text {
+                margin: 0 auto;
+            }
+    
+            .img {
+                background: rgba(0, 0, 0, 1);
+                padding: .85rem 1rem;
+            }
         }
     }
-}
-
-.about {
-    margin-top: 6rem;
-
-    h2 {
-        @include v.headings;
+    
+    .about {
+        margin-top: 6rem;
+    
+        h2 {
+            @include v.headings;
+        }
+    
+        p {
+            font-size: 1rem;
+            line-height: 30px;
+            font-weight: 300;
+            // color: rgba(91, 90, 99, 1);
+            color: c.$grayishDarkBlue;
+        }
+    
+        .text {
+            @include v.textBorders;
+        }
+    
+        .img-container img {
+            box-sizing: border-box;
+            width: 100%;
+        }
+    
+        .btn {
+            margin-bottom: 3rem;
+            width: 202px;
+            @include v.buttons;
+        }
     }
-
-    p {
-        font-size: 1rem;
-        line-height: 30px;
-        font-weight: 300;
-        // color: rgba(91, 90, 99, 1);
-        color: c.$grayishDarkBlue;
-    }
-
-    .text {
-        margin-top: 2rem;
-        border-top: 1px solid rgba(220, 220, 222, 1);
-        border-bottom: 1px solid rgba(220, 220, 222, 1);
-    }
-
-    .img-container img {
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    .btn {
-        margin-bottom: 3rem;
-        width: 202px;
-        @include v.buttons;
-    }
+    
 }
 
 .collab {
@@ -133,7 +134,7 @@ nav {
 
     .btn {
         @include v.buttons;
-        margin: 2.5rem auto 0;
+        margin: 2.5rem auto 0 !important;
         width: 162px;
     }
 }
@@ -167,7 +168,17 @@ footer {
     }
 }
 
-
+// mobile menu styles when active;
 .active {
-    display: flex;
+    .overlay {
+        display: flex;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    #close-btn {
+        display: block;
+    }
 }

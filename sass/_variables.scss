@@ -36,3 +36,9 @@
     justify-content: space-between;
     width: 30%;
 }
+
+@mixin textBorders {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(220, 220, 222, 1);
+    border-bottom: 1px solid rgba(220, 220, 222, 1);
+}

@@ -1,23 +1,33 @@
 @use 'variables' as v;
 @use 'colors' as c;
 
-h1 {
-    @include v.headings
+body.contact {
+
+    h1, h2 {
+        @include v.headings
+    }
+    
+    p {
+        @include v.paragraphs;
+    }
+
+    .text {
+        @include v.textBorders
+    }
+    
+    .socials {
+       @include v.socials;
+       margin-bottom: 1.5rem;
+    }
+
 }
 
-p {
-    @include v.paragraphs;
-}
-
-.socials {
-   @include v.socials;
-   margin-bottom: 1.5rem;
-}
 
 label {
     font-size: .813rem;
     font-weight: 700;
     color: c.$grayishDarkBlue;
+    line-height: 30px;
 }
 
 input, textarea {
@@ -25,16 +35,21 @@ input, textarea {
     margin-top: .5rem;
     box-sizing: border-box;
     width: 100%;
-    padding: .8rem;
+    padding: .575rem 1rem;
     border: none;
     background: rgba(230, 230, 231, 1);
     line-height: 30px;
     font-size: .813rem;
     outline: none;
+    box-sizing: border-box;
 
     &:focus {
         border: 1px solid c.$desaturaredCyan;
     }
+}
+
+.email, .name {
+    margin-bottom: 1.25rem;
 }
 
 
@@ -46,4 +61,21 @@ button {
     color: rgba(255, 255, 255, 1);
     border: none;
     background: c.$darkBlue;
+    width: 200px;
+    padding: 1.075rem 0;
+    margin-top: 2rem;
+}
+
+.has-error {
+
+    input, textarea {
+        border: 1px solid c.$brightRed;
+    }
+    .error-div {
+        color: c.$brightRed;
+        font-size: .625rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-top: .25rem;
+    }
 }

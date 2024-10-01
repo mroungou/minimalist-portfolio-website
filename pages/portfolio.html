@@ -9,18 +9,22 @@
   <script src="../index.js" defer></script>
   <title>Minimalist Portfolio</title>
 </head>
-<body>
+<body class="portfolio">
     <main>
-        <nav class="nav">
-            <div class="logo"><img src="./images/logo.svg" alt="Logo"></div>
-            <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
-            <div class="close-menu mobile" id="close-menu"><img src="./images/icons/close.svg" alt="Close Menu"></div>
-              <div class="mobile overlay">
-                  <a href="./index.html">Home</a>
-                  <a href="./portfolio.html">Portfolio</a>
-                  <a href="./contact.html">Contact Me</a>
+        <header>
+            <nav class="nav" id="nav">
+              <div class="logo"><img src="./images/logo.svg" alt="Logo"></div>
+              <div class="mobile-menu" id="menu-content">
+                <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
+                <div class="close-menu mobile" id="close-btn"><img src="./images/icons/close.svg" alt="Close Menu"></div>
+                <div class="mobile overlay" id="overlay">
+                    <a href="./index.html">Home</a>
+                    <a href="./portfolio.html">Portfolio</a>
+                    <a href="./contact.html">Contact Me</a>
+                </div>
               </div>
             </nav>
+          </header>
         <section class="projects">
             <div class="manage project">
                 <div class="project-img">

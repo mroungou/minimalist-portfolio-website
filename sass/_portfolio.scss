@@ -1,37 +1,37 @@
 @use 'colors' as c;
 @use 'variables' as v;
 
-.projects {
-    margin-top: 2rem;
-}
+body.portfolio {
+        .projects {
+        margin-top: 2rem;
+    }
 
-// this targets all the div elements that are children of the projects div except the first one
-.project:not(:first-child) {
-    margin-top: 4rem;
-}
+    // this targets all the div elements that are children of the projects div except the first one
+    .project:not(:first-child) {
+        margin-top: 4rem;
+    }
 
 
-.project-img img {
-    box-sizing: border-box;
-    width: 100%;
-}
+    .project-img img {
+        box-sizing: border-box;
+        width: 100%;
+    }
 
-h2 {
-    @include v.headings;
-}
+    h2 {
+        @include v.headings;
+    }
 
-p {
-   @include v.paragraphs;
-}
+    p {
+        @include v.paragraphs;
+    }
 
-.text {
-    margin-top: 2rem;
-    border-top: 1px solid rgba(220, 220, 222, 1);
-    border-bottom: 1px solid rgba(220, 220, 222, 1);
-}
+    .text {
+        @include v.textBorders;
+    }
 
-.btn {
-    @include v.buttons;
-    width: 175px;
-    margin: 1.5rem 0;
+    .btn {
+        @include v.buttons;
+        width: 175px;
+        margin: 1.5rem 0;
+    }
 }
