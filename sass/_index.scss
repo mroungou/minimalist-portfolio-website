@@ -1,0 +1,103 @@
+@use 'variables' as v;
+@use 'colors' as c;
+
+body.portfolio-index {
+
+    .project-prev-img img{
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    h1 {
+        @include v.headings;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    p {
+        @include v.paragraphs;
+    }
+
+    .text {
+        @include v.textBorders;
+    }
+
+    .tech-info p {
+        color: c.$desaturaredCyan;
+        font-weight: 700;
+        font-size: .813rem;
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        @include v.buttons;
+        width: 178px;
+        margin-bottom: 1.5rem
+    }
+
+    h2{
+        font-size: 2rem;
+        font-weight: 400;
+        color: c.$grayishDarkBlue;
+        line-height: 42px;
+        letter-spacing: -.29px;
+        margin-top: 2.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: c.$grayishDarkBlue;
+        line-height: 32px;
+        letter-spacing: -.29px;
+        margin-top: 2.5rem;
+        margin-bottom: 1.75rem;
+    }
+    
+    .img-previews {
+        margin-top: 2.5rem;
+        display: grid;
+        row-gap: 2rem;
+        margin-bottom: 4rem;
+        img {
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+    
+    .project-nav {
+        display: grid;
+        @include v.textBorders;
+        margin-top: 0;
+    
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            line-height: 30px;
+            font-size: 1rem;
+            color: c.$grayishDarkBlue;
+            font-weight: 300;
+        }
+
+        img {
+            margin-bottom: 1rem;
+        }
+
+        .previous, 
+        .next {
+            padding: 1.5rem 0;
+        }
+
+        .next {
+            text-align: right;
+            border-left: 1px solid rgba(220, 220, 222, 1);
+        }
+    }
+}
+

@@ -12,7 +12,8 @@ body.contact {
     }
 
     .text {
-        @include v.textBorders
+        @include v.textBorders;
+        margin-top: 0;
     }
     
     .socials {

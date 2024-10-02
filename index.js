@@ -20,19 +20,17 @@ const validateInputs = () => {
 
         if (input.value === '') {
             hasError(input, validationMessage.empty)
-            console.log('empty')
         } else {
             hasNoError(input)
-            // console.log('not empty')
         }
     })
 
+    const emailInput = Array.from(inputs).find(input => input.name === 'email');
     const isEmail = emailRegex.test(messageData.email)
 
-    console.log(inputs);
-
-    if (!isEmail) {
-        hasError(inputs[1], validationMessage.invalid.replace(':attribute', 'email'));
+    // checking for emailInput in case it returns null or undefined.
+    if (!isEmail && emailInput) {
+        hasError(emailInput, validationMessage.invalid.replace(':attribute', 'email'));
     }
 
     console.log(messageData)

@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-body.portfolio .projects {
-  margin-top: 2rem;
-}
 body.portfolio .project:not(:first-child) {
   margin-top: 4rem;
 }
@@ -60,6 +57,7 @@ body.contact .text {
   margin-top: 2rem;
   border-top: 1px solid rgb(220, 220, 222);
   border-bottom: 1px solid rgb(220, 220, 222);
+  margin-top: 0;
 }
 body.contact .socials {
   display: flex;
@@ -120,6 +118,110 @@ button {
   margin-top: 0.25rem;
 }
 
+body.portfolio-index .project-prev-img img {
+  box-sizing: border-box;
+  width: 100%;
+}
+body.portfolio-index h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  color: rgb(51, 50, 61);
+  line-height: 42px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+body.portfolio-index p {
+  line-height: 30px;
+  font-size: 0.938rem;
+  color: rgb(51, 50, 61);
+  font-weight: 400;
+}
+body.portfolio-index .text {
+  margin-top: 2rem;
+  border-top: 1px solid rgb(220, 220, 222);
+  border-bottom: 1px solid rgb(220, 220, 222);
+}
+body.portfolio-index .tech-info p {
+  color: rgb(95, 180, 162);
+  font-weight: 700;
+  font-size: 0.813rem;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+body.portfolio-index .btn {
+  border: 1px solid rgb(51, 50, 61);
+  padding: 0.865rem 0;
+  text-align: center;
+  align-self: center;
+  width: 178px;
+  margin-bottom: 1.5rem;
+}
+body.portfolio-index .btn a, body.portfolio-index .btn a:visited {
+  font-size: 0.75rem;
+  color: rgb(51, 50, 61);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body.portfolio-index h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(51, 50, 61);
+  line-height: 42px;
+  letter-spacing: -0.29px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.75rem;
+}
+body.portfolio-index h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(51, 50, 61);
+  line-height: 32px;
+  letter-spacing: -0.29px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.75rem;
+}
+body.portfolio-index .img-previews {
+  margin-top: 2.5rem;
+  display: grid;
+  row-gap: 2rem;
+  margin-bottom: 4rem;
+}
+body.portfolio-index .img-previews img {
+  box-sizing: border-box;
+  width: 100%;
+}
+body.portfolio-index .project-nav {
+  display: grid;
+  margin-top: 2rem;
+  border-top: 1px solid rgb(220, 220, 222);
+  border-bottom: 1px solid rgb(220, 220, 222);
+  margin-top: 0;
+}
+body.portfolio-index .project-nav h3 {
+  margin: 0;
+}
+body.portfolio-index .project-nav p {
+  margin: 0;
+  line-height: 30px;
+  font-size: 1rem;
+  color: rgb(51, 50, 61);
+  font-weight: 300;
+}
+body.portfolio-index .project-nav img {
+  margin-bottom: 1rem;
+}
+body.portfolio-index .project-nav .previous,
+body.portfolio-index .project-nav .next {
+  padding: 1.5rem 0;
+}
+body.portfolio-index .project-nav .next {
+  text-align: right;
+  border-left: 1px solid rgb(220, 220, 222);
+}
+
 body {
   font-family: "Public Sans", sans-serif;
 }
@@ -136,6 +238,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
+  margin-bottom: 2.5rem;
 }
 nav .mobile-menu {
   display: flex;
@@ -166,9 +269,6 @@ nav .overlay a, nav .overlay a:visited {
   text-decoration: none;
 }
 
-body.index .hero {
-  margin-top: 2.5rem;
-}
 body.index .hero h1 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;

@@ -3,49 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bookmark Project</title>
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <script src="../index.js" defer></script>
+  <title>Minimalist Portfolio</title>
 </head>
-<body>
-
-  Home
-  Portfolio
-  Contact Me
-
-  Bookmark
-
-  This project required me to build a fully responsive landing page to the designs 
-  provided. I used HTML5, along with CSS Grid and JavaScript for the areas that 
-  required interactivity, such as the features section.
-
-  Interaction Design / Front End Development
-
-  HTML / CSS / JS
-
-  Visit Website
-
-  Project Background
-
-  This project was a front-end  challenge from Frontend Mentor. It’s a platform that 
-  enables you to practice building websites to a design and project brief. Each challenge 
-  includes mobile and desktop designs to show how the website should look at different 
-  screen sizes. Creating these projects has helped me refine my workflow and solve 
-  real-world coding problems. I’ve learned something new with each project, helping 
-  me to improve and adapt my style.
-
-  Static Previews
-
-  Manage
-  Previous Project
-
-  Insure
-  Next Project
-
-  Interested in doing a project together?
-
-  Contact Me
-
+<body class="portfolio-index bookmark">
+    <main>
+        <header>
+            <nav class="nav" id="nav">
+              <div class="logo"><img src="./images/logo.svg" alt="Logo"></div>
+              <div class="mobile-menu" id="menu-content">
+                <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
+                <div class="close-menu mobile" id="close-btn"><img src="./images/icons/close.svg" alt="Close Menu"></div>
+                <div class="mobile overlay" id="overlay">
+                    <a href="./index.html">Home</a>
+                    <a href="./portfolio.html">Portfolio</a>
+                    <a href="./contact.html">Contact Me</a>
+                </div>
+              </div>
+            </nav>
+        </header>
+        <div class="info">
+            <section class="hero">
+                <div class="project-prev-img">
+                    <img src="./images/detail/mobile/image-bookmark-hero@2x.jpg" alt="Bookmark Site Preview" class="mobile">
+                </div>
+                <section class="text">
+                    <h1>Bookmark</h1>
+                   <p>
+                       This project required me to build a fully responsive landing page to the designs
+                       provided. I used HTML5, along with CSS Grid and JavaScript for the areas that
+                       required interactivity, such as the features section.
+                   </p>
+                    <div class="tech-info">
+                        <p>
+                            Interaction Design / Front End Development
+                            <span class="tech">HTML / CSS / JS</span>
+                        </p>
+                    </div>
+                    <div class="btn"><a href="">Visit Website</a></div>
+                </section>
+            </section>
+            <section class="about-project">
+                <h2>Project Background</h2>
+                <p>
+                    This project was a front-end  challenge from Frontend Mentor. It’s a platform that
+                    enables you to practice building websites to a design and project brief. Each challenge
+                    includes mobile and desktop designs to show how the website should look at different
+                    screen sizes. Creating these projects has helped me refine my workflow and solve
+                    real-world coding problems. I’ve learned something new with each project, helping
+                    me to improve and adapt my style.
+                </p>
+            </section>
+            <section class="static-previews">
+                <h3>Static Previews</h3>
+                <div class="img-previews">
+                    <img src="./images/detail/mobile/image-bookmark-preview-1@2x.jpg" alt="Preview of Bookmark Website" class="mobile">
+                    <img src="./images/detail/mobile/image-bookmark-preview-2@2x.jpg" alt="Second Preview of Bookmark Website" class="mobile">
+                </div>
+            </section>
+            <nav class="project-nav">
+                <div class="previous" id="previous">
+                    <img src="./images/icons/arrow-left.svg" alt="Previous Button" class="prev-btn" id="prev-btn">
+                    <h3>Manage</h3>
+                    <p>
+                        Previous Project
+                    </p>
+                </div>
+              <div class="next" id="next">
+                <img src="./images/icons/arrow-right.svg" alt="Next Button" class="next-btn" id="next-btn">
+                <h3>Insure</h3>
+                <p>
+                    Next Project
+                </p>
+              </div>
+            </nav>
+        </div>
+        <section class="collab">
+            <h3>Interested in doing a project together?</h3>
+            <div class="btn"><a href="./contact.html">Contact Me</a></div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="./images/logo-white.svg" alt="Logo">
+        </div>
+        <div class="links">
+            <a href="./index.html">Home</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./portfolio.html">Portfolio</a>
+        </div>
+        <div class="socials">
+            <div class="git"><img src="./images/icons/git-white.svg" alt="Github"></div>
+            <div class="twitter"><img src="./images/icons/twitter-white.svg" alt="Twitter"></div>
+            <div class="linkedin"><img src="./images/icons/linkedin-white.svg" alt="LinkedIn"></div>
+        </div>
+    </footer>
 </body>
 </html>
