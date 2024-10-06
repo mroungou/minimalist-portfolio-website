@@ -30,18 +30,18 @@
             <img src="./images/homepage/mobile/image-homepage-hero@2x.jpg" class="mobile" alt="Build Better Projects">
         </div>
           <div class="text">
-              <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
-              <div class="btn">
+            <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
+            <button class="btn" onclick="document.location.href = '#about-me'">
                 <div class="img"><img src="./images/icons/down-arrows.svg" alt=""></div>
                 <div class="btn-text">About Me</div>
-            </div>
+            </button>
           </div>
       </section>
       <section class="about">
         <div class="img-container">
             <img src="./images/homepage/mobile/image-homepage-profile@2x.jpg" alt="Alex Spencer" class="mobile">
         </div>
-          <div class="text">
+          <div class="text" id="about-me">
               <h2>About Me</h2>
               <p>
                   I’m a junior front-end developer looking for a new role in an exciting company.
@@ -52,12 +52,12 @@
                   I love being out in nature whether that’s going for a walk, run or cycling. I’d love
                   you to check out my work.
               </p>
-              <div class="btn"><a href="./portfolio.html">Go to Portfolio</a></div>
+              <button onclick="document.location.href='./portfolio.html'" class="btn-main">Go to Portfolio</button>
           </div>
       </section>
       <section class="collab">
           <h3>Interested in doing a project together?</h3>
-          <div class="btn"><a href="./contact.html">Contact Me</a></div>
+          <button onclick="document.location.href='./contact.html'" class="btn-main">Contact Me</button>
       </section>
     </main>
     <footer>

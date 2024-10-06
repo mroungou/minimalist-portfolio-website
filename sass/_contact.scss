@@ -23,6 +23,10 @@ body.contact {
 
 }
 
+.form {
+    margin-bottom: 6rem;
+}
+
 
 label {
     font-size: .813rem;
@@ -56,14 +60,7 @@ input, textarea {
 
 
 button {
-    text-transform: uppercase;
-    font-size: .75rem;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 1);
-    border: none;
-    background: c.$darkBlue;
-    width: 200px;
-    padding: 1.075rem 0;
+    @include v.greenBtn;
     margin-top: 2rem;
 }
 

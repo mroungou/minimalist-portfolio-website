@@ -8,19 +8,11 @@
     line-height: 42px;
 }
 
-@mixin buttons {
-    border: 1px solid c.$grayishDarkBlue;
-    padding: .865rem 0;
-    text-align: center;
-    align-self: center;
-
-    a,a:visited {
-        font-size: .75rem;
-        color: c.$grayishDarkBlue;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
+@mixin headingPortfolio {
+    font-size: 2rem;
+    font-weight: 400;
+    color: c.$grayishDarkBlue;
+    letter-spacing: -.29px;
 }
 
 @mixin paragraphs {
@@ -30,15 +22,38 @@
     font-weight: 400;
 }
 
+@mixin textBorders {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(220, 220, 222, 1);
+    border-bottom: 1px solid rgba(220, 220, 222, 1);
+}
+
+@mixin buttons {
+    border: 1px solid c.$grayishDarkBlue;
+    padding: .865rem 0;
+    text-align: center;
+    align-self: center;
+    font-size: .75rem;
+    color: c.$grayishDarkBlue;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: none;
+}
+
+@mixin greenBtn {
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    background: c.$darkBlue;
+    width: 200px;
+    height: 48px;
+}
+
 @mixin socials {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 30%;
-}
-
-@mixin textBorders {
-    margin-top: 2rem;
-    border-top: 1px solid rgba(220, 220, 222, 1);
-    border-bottom: 1px solid rgba(220, 220, 222, 1);
 }

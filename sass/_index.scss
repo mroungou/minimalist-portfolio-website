@@ -3,15 +3,15 @@
 
 body.portfolio-index {
 
-    .project-prev-img img{
+    .project-prev-img img, 
+    .img-previews img{
         box-sizing: border-box;
         width: 100%;
     }
 
     h1 {
         @include v.headings;
-        margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
+        margin: 1.25 0rem;
     }
 
     p {
@@ -37,22 +37,16 @@ body.portfolio-index {
         margin-bottom: 1.5rem
     }
 
-    h2{
-        font-size: 2rem;
-        font-weight: 400;
-        color: c.$grayishDarkBlue;
+    h2 {
+        @include v.headingPortfolio;
         line-height: 42px;
-        letter-spacing: -.29px;
         margin-top: 2.5rem;
         margin-bottom: 1.75rem;
     }
 
     h3 {
-        font-size: 2rem;
-        font-weight: 400;
-        color: c.$grayishDarkBlue;
+        @include v.headingPortfolio;
         line-height: 32px;
-        letter-spacing: -.29px;
         margin-top: 2.5rem;
         margin-bottom: 1.75rem;
     }
@@ -62,10 +56,6 @@ body.portfolio-index {
         display: grid;
         row-gap: 2rem;
         margin-bottom: 4rem;
-        img {
-            box-sizing: border-box;
-            width: 100%;
-        }
     }
     
     .project-nav {
@@ -97,6 +87,14 @@ body.portfolio-index {
         .next {
             text-align: right;
             border-left: 1px solid rgba(220, 220, 222, 1);
+        }
+    }
+
+    .collab {
+        h3 {
+            @include v.headings;
+            margin-block: 0;
+            text-align: center;
         }
     }
 }

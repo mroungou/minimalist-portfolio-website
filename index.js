@@ -69,7 +69,7 @@ closeMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('active')
 })
 
-form.addEventListener('submit', (e) => {
+form?.addEventListener('submit', (e) => {
     e.preventDefault()
 
     validateInputs();

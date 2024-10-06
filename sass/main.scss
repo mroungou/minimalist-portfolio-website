@@ -14,14 +14,17 @@ h1, h2, h3 {
 }
 
 main {
-    padding: 2rem;
+    padding: 2rem 2rem 0;
+}
+
+header {
+    margin-bottom: 2.5rem;
 }
 
 nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     position: relative;
-    margin-bottom: 2.5rem;
 
     .mobile-menu {
         display: flex;
@@ -62,7 +65,7 @@ body.index {
     .hero {
         h1 {
             margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
             @include v.headings;
         }
     
@@ -72,22 +75,23 @@ body.index {
         }
     
         .btn {
-            font-size: .75rem;
-            text-transform: uppercase;
-            color: c.$veryLightGrey;
-            letter-spacing: 2px;
+            @include v.greenBtn;
             display: flex;
             align-items: center;
+            margin-top: 2.5rem;
             background: rgba(32, 58, 76, 1);
-            width: 200px;
-    
+            padding: 0;
             .btn-text {
                 margin: 0 auto;
             }
-    
+            
             .img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background: rgba(0, 0, 0, 1);
-                padding: .85rem 1rem;
+                width: 48px;
+                height: 48px;
             }
         }
     }
@@ -97,14 +101,14 @@ body.index {
     
         h2 {
             @include v.headings;
+            margin-block: 0;
+            margin: 2rem 0;
         }
     
         p {
-            font-size: 1rem;
-            line-height: 30px;
-            font-weight: 300;
-            // color: rgba(91, 90, 99, 1);
-            color: c.$grayishDarkBlue;
+          @include v.paragraphs;
+          font-size: 1rem;
+          margin: 0;
         }
     
         .text {
@@ -116,26 +120,29 @@ body.index {
             width: 100%;
         }
     
-        .btn {
-            margin-bottom: 3rem;
-            width: 202px;
+        .btn-main {
             @include v.buttons;
+            margin-top: 1.75rem;
+            margin-bottom: 4rem;
         }
     }
     
 }
 
 .collab {
-    margin-top: 6rem;
-    h3 {
-        @include v.headings;
-        text-align: center;
+   margin: 6rem 0;
+   
+   h3 {
+       @include v.headings;
+       margin-block: 0;
+       text-align: center;
     }
 
-    .btn {
+    .btn-main {
         @include v.buttons;
-        margin: 2.5rem auto 0 !important;
         width: 162px;
+        display: block;
+        margin: 2.5rem auto 0 !important;
     }
 }
 

@@ -2,15 +2,12 @@
 @use 'variables' as v;
 
 body.portfolio {
-        .projects {
-        // margin-top: 2rem;
-    }
 
-    // this targets all the div elements that are children of the projects div except the first one
+  /*   this targets all the div elements that are children of 
+  the projects div except the first one */
     .project:not(:first-child) {
         margin-top: 4rem;
     }
-
 
     .project-img img {
         box-sizing: border-box;
@@ -29,7 +26,7 @@ body.portfolio {
         @include v.textBorders;
     }
 
-    .btn {
+    .btn-main {
         @include v.buttons;
         width: 175px;
         margin: 1.5rem 0;
