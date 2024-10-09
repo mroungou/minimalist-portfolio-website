@@ -135,13 +135,14 @@ body.portfolio-index h1 {
   letter-spacing: -0.36px;
   color: rgb(51, 50, 61);
   line-height: 42px;
-  margin: 1.25 0rem;
+  margin: 1.5rem 0rem;
 }
 body.portfolio-index p {
   line-height: 30px;
   font-size: 0.938rem;
   color: rgb(51, 50, 61);
   font-weight: 400;
+  margin: 0 0 1.5rem;
 }
 body.portfolio-index .text {
   margin-top: 2rem;
@@ -155,6 +156,7 @@ body.portfolio-index .tech-info p {
   line-height: 30px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 body.portfolio-index .btn {
   border: 1px solid rgb(51, 50, 61);
@@ -168,6 +170,7 @@ body.portfolio-index .btn {
   background: none;
   width: 178px;
   margin-bottom: 1.5rem;
+  padding: 1rem 0;
 }
 body.portfolio-index h2 {
   font-size: 2rem;
@@ -194,32 +197,36 @@ body.portfolio-index .img-previews {
   margin-bottom: 4rem;
 }
 body.portfolio-index .project-nav {
-  display: grid;
-  margin-top: 2rem;
   border-top: 1px solid rgb(220, 220, 222);
   border-bottom: 1px solid rgb(220, 220, 222);
-  margin-top: 0;
 }
-body.portfolio-index .project-nav h3 {
+body.portfolio-index .project-nav .next {
+  border-left: 1px solid rgb(220, 220, 222);
+  align-items: end;
+}
+body.portfolio-index .btn-nav {
+  box-sizing: border-box;
+  width: 100%;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1.65rem 0;
   margin: 0;
 }
-body.portfolio-index .project-nav p {
-  margin: 0;
-  line-height: 30px;
-  font-size: 1rem;
-  color: rgb(51, 50, 61);
-  font-weight: 300;
-}
-body.portfolio-index .project-nav img {
+body.portfolio-index .btn-nav img {
   margin-bottom: 1rem;
 }
-body.portfolio-index .project-nav .previous,
-body.portfolio-index .project-nav .next {
-  padding: 1.5rem 0;
+body.portfolio-index .btn-nav h3 {
+  text-transform: capitalize;
+  margin: 0;
 }
-body.portfolio-index .project-nav .next {
-  text-align: right;
-  border-left: 1px solid rgb(220, 220, 222);
+body.portfolio-index .btn-nav p {
+  margin: 0;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: rgb(150, 150, 156);
 }
 body.portfolio-index .collab h3 {
   font-size: 2.5rem;
