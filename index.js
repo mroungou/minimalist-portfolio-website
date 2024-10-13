@@ -17,7 +17,6 @@ const validationMessage = {
 and description - to be dynamically added to the DOM when user clicks on the view website btn from
 the portfolio page */
 const projectsData = [
-
     {
         'project name': 'Manage',
         'project summary': "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
@@ -25,18 +24,83 @@ const projectsData = [
         'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
 
         'mobile': {
+            'hero-src': "./images/detail/mobile/image-manage-hero@2x.jpg",
             'src-1': './images/detail/mobile/image-manage-preview-1@2x.jpg',
-            'src-2': './images/detail/mobile/image-manage-preview-2@2x.jpg'
+            'src-2': './images/detail/mobile/image-manage-preview-2@2x.jpg',
         },
+
+        'tablet': {
+
+        },
+        
+        'desktop': {
+
+        }
+    },
+
+    {
+        'project name' : 'Bookmark',
+        'project summary': "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
+        'technologies': 'HTML / CSS / JS',
+        'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+
+        'mobile': {
+            'hero-src': "./images/detail/mobile/image-bookmark-hero@2x.jpg",
+            'src-1': './images/detail/mobile/image-bookmark-preview-1@2x.jpg',
+            'src-2': './images/detail/mobile/image-bookmark-preview-2@2x.jpg',
+        },
+
+        'tablet': {
+
+        },
+        
+        'desktop': {
+
+        }
+    },
+
+    {
+        'project name' : 'Insure',
+        'project summary': "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
+        'technologies': 'HTML / CSS / JS',
+        'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+
+        'mobile': {
+            'hero-src': "./images/detail/mobile/image-insure-hero@2x.jpg",
+            'src-1': './images/detail/mobile/image-insure-preview-1@2x.jpg',
+            'src-2': './images/detail/mobile/image-insure-preview-2@2x.jpg',
+        },
+
+        'tablet': {
+
+        },
+        
+        'desktop': {
+
+        }
+    },
+
+    {
+        'project name' : 'Fylo',
+        'project summary': "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
+        'technologies': 'HTML / CSS',
+        'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+
+        'mobile': {
+            'hero-src': "./images/detail/mobile/image-fylo-hero@2x.jpg",
+            'src-1': './images/detail/mobile/image-fylo-preview-1@2x.jpg',
+            'src-2': './images/detail/mobile/image-fylo-preview-2@2x.jpg',
+        },
+
+        'tablet': {
+
+        },
+        
+        'desktop': {
+
+        }
     },
 ]
-
-/* getting the html elments of h1, the hero header img, tech used, summary and the previews */
-const projectName = document.getElementById('project-name');
-const projectSummary = document.getElementById('project-summary');
-const techUsed = document.getElementById('tech');
-const projectBg = document.getElementById('project-bg');
-const previewsDiv = document.getElementById('img-previews');
 
 // regex used to test email provided
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -95,30 +159,22 @@ const hasNoError = (element) => {
     }
 }
 
-const updateProjectPage = (project) => {
-    // removing all existing text and images;
-    projectName.innerText = '';
-    projectSummary.innerText = '';
-    techUsed.innerText = '';
-    projectBg.innerText = '';
-    previewsDiv.innerHTML = '';
 
-    projectName.innerText = projectsData[project]["project name"];
-    projectSummary.innerText = projectsData[project]["project summary"]
-}
-
-viewProjectBtn?.forEach(btn => {
+viewProjectBtn?.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-        window.location.href = './bookmark.html'
+
+        // storing the selected project in the session storage
+        sessionStorage.setItem('selectedProject', index)
+
+        // updateProjectPage(projectIndex);
+        // updating the url without reloding page
+/*         const newUrl = `project.html?project-${index}`
+        window.history.pushState({path : newUrl}, '', newUrl) */
+
+        // goes to the project bookmark.html
+        window.location.href = `./project.html`;
     })
 
-    const projectIndex = Array.from(viewProjectBtn).indexOf(btn);
-    updateProjectPage(projectIndex);
-})
-
-
-window.addEventListener('DOMContentLoaded', () => {
-   updateProjectPage()
 })
 
 openMenuBtn.addEventListener('click', () => {

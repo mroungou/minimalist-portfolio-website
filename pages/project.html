@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../normalize.css">
   <link rel="stylesheet" href="../dist/css/main.css">
   <script src="../index.js" defer></script>
+  <script src="../project.js" defer></script>
   <title>Minimalist Portfolio</title>
 </head>
 <body class="portfolio-index bookmark">
@@ -27,20 +28,17 @@
         </header>
         <div class="info">
             <section class="hero">
-                <div class="project-prev-img" id="project-prev-img">
-                    <img src="./images/detail/mobile/image-bookmark-hero@2x.jpg" alt="Bookmark Site Preview" class="mobile">
+                <div class="project-prev-img" id="project-hero-img">
                 </div>
                 <section class="text">
-                    <h1 id="project-name">Bookmark</h1>
+                    <h1 id="project-name"></h1>
                    <p id="project-summary">
-                       This project required me to build a fully responsive landing page to the designs
-                       provided. I used HTML5, along with CSS Grid and JavaScript for the areas that
-                       required interactivity, such as the features section.
+                       
                    </p>
                     <div class="tech-info">
                         <p>
                             Interaction Design / Front End Development
-                            <span class="tech" id="tech">HTML / CSS / JS</span>
+                            <span class="tech" id="tech"></span>
                         </p>
                     </div>
                     <div class="btn"><a href="">Visit Website</a></div>
@@ -49,30 +47,24 @@
             <section class="about-project">
                 <h2>Project Background</h2>
                 <p id="project-bg">
-                    This project was a front-end  challenge from Frontend Mentor. It’s a platform that
-                    enables you to practice building websites to a design and project brief. Each challenge
-                    includes mobile and desktop designs to show how the website should look at different
-                    screen sizes. Creating these projects has helped me refine my workflow and solve
-                    real-world coding problems. I’ve learned something new with each project, helping
-                    me to improve and adapt my style.
                 </p>
             </section>
             <section class="static-previews">
                 <h3>Static Previews</h3>
                 <div class="img-previews" id="img-previews">
-                    <img src="./images/detail/mobile/image-bookmark-preview-1@2x.jpg" alt="Preview of Bookmark Website" class="mobile">
-                    <img src="./images/detail/mobile/image-bookmark-preview-2@2x.jpg" alt="Second Preview of Bookmark Website" class="mobile">
+                    <!-- <img src="./images/detail/mobile/image-bookmark-preview-1@2x.jpg" alt="Preview of Bookmark Website" class="mobile">
+                    <img src="./images/detail/mobile/image-bookmark-preview-2@2x.jpg" alt="Second Preview of Bookmark Website" class="mobile"> -->
                 </div>
             </section>
             <nav class="project-nav">
                 <button class="previous btn-nav" id="previous">
                     <img src="./images/icons/arrow-left.svg" alt="Previous Button" class="prev-btn" id="prev-btn">
-                    <h3>Manage</h3>
+                    <h3 id="prev-project"></h3>
                     <p>Previous Project</p>
                 </button>
                 <button class="next btn-nav" id="next">
                     <img src="./images/icons/arrow-right.svg" alt="Next Button" class="next-btn" id="next-btn">
-                    <h3>Insure</h3>
+                    <h3 id="next-project"></h3>
                     <p>Next Project</p>
                 </button>
             </nav>
