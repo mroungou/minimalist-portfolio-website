@@ -40,6 +40,10 @@ body.portfolio-index {
         padding: 1rem 0;
     }
 
+    button {
+        margin-top: 0;
+    }
+
     h2 {
         @include v.headingPortfolio;
         line-height: 42px;

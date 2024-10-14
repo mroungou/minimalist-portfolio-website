@@ -34,10 +34,15 @@
     text-align: center;
     align-self: center;
     font-size: .75rem;
-    color: c.$grayishDarkBlue;
     letter-spacing: 2px;
     text-transform: uppercase;
     background: none;
+    color: c.$grayishDarkBlue;
+    
+    a,a:visited {
+        color: c.$grayishDarkBlue;
+        text-decoration: none;
+    }
 }
 
 @mixin greenBtn {

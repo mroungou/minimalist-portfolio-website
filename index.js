@@ -22,6 +22,7 @@ const projectsData = [
         'project summary': "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
         'technologies': 'HTML / CSS / JS',
         'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+        'project website': "https://www.google.com/",
 
         'mobile': {
             'hero-src': "./images/detail/mobile/image-manage-hero@2x.jpg",
@@ -43,6 +44,7 @@ const projectsData = [
         'project summary': "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
         'technologies': 'HTML / CSS / JS',
         'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+        'project website': "https://www.google.com/",
 
         'mobile': {
             'hero-src': "./images/detail/mobile/image-bookmark-hero@2x.jpg",
@@ -64,6 +66,7 @@ const projectsData = [
         'project summary': "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
         'technologies': 'HTML / CSS / JS',
         'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+        'project website': "https://www.google.com/",
 
         'mobile': {
             'hero-src': "./images/detail/mobile/image-insure-hero@2x.jpg",
@@ -85,6 +88,7 @@ const projectsData = [
         'project summary': "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
         'technologies': 'HTML / CSS',
         'project background': 'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
+        'project website': "https://freecodecamp.org",
 
         'mobile': {
             'hero-src': "./images/detail/mobile/image-fylo-hero@2x.jpg",

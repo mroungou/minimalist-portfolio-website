@@ -10,12 +10,12 @@
   <script src="../project.js" defer></script>
   <title>Minimalist Portfolio</title>
 </head>
-<body class="portfolio-index bookmark">
+<body class="portfolio-index">
     <main>
         <header>
             <nav class="nav" id="nav">
-              <div class="logo"><img src="./images/logo.svg" alt="Logo"></div>
-              <div class="mobile-menu" id="menu-content">
+                <div class="logo" onclick="document.location.href='./index.html'"><img src="./images/logo.svg" alt="Logo"></div>
+                <div class="mobile-menu" id="menu-content">
                 <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
                 <div class="close-menu mobile" id="close-btn"><img src="./images/icons/close.svg" alt="Close Menu"></div>
                 <div class="mobile overlay" id="overlay">
@@ -41,7 +41,7 @@
                             <span class="tech" id="tech"></span>
                         </p>
                     </div>
-                    <div class="btn"><a href="">Visit Website</a></div>
+                    <button class="btn"><a target="_blank" id="project-website-link" href="">Visit Website</a></button>
                 </section>
             </section>
             <section class="about-project">

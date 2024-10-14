@@ -5,6 +5,7 @@ const techUsed = document.getElementById('tech');
 const projectBg = document.getElementById('project-bg');
 const previewsDiv = document.getElementById('img-previews');
 const projectHeroImg = document.getElementById('project-hero-img');
+const projectWebsiteLink = document.getElementById('project-website-link')
 /* getting the el that contains the text for the previous and next button
 will be updating them based on the project that is displayed */
 const nextProjectName = document.getElementById('next-project');
@@ -21,6 +22,7 @@ const updateProjectPage = (project) => {
     projectBg.innerText = '';
     previewsDiv.innerHTML = '';
     projectHeroImg.innerHTML = '';
+    projectWebsiteLink.href = '';
 
     // creating img elements for the previews
     const imgPreview1 = document.createElement('img');
@@ -45,6 +47,7 @@ const updateProjectPage = (project) => {
     projectSummary.innerText = projectsData[project]["project summary"];
     techUsed.innerText = projectsData[project].technologies;
     projectBg.innerText = projectsData[project]["project background"];
+    projectWebsiteLink.href = projectsData[project]["project website"];
     
     projectHeroImg.append(heroImg);
     previewsDiv.append(imgPreview1, imgPreview2);
@@ -59,19 +62,41 @@ const projectNavigation = (direction) => {
     let newIndex
 
     if (direction === 'next') {
-        newIndex = currentProjectIndex + 1
-        console.log(newIndex)
+        /* currentProjectIndex + 1 increases the currentProjectIndezx by 1 to go to the next
+        project
+
+        %projetsData.length ensureses that if you reach the end of the project list, you wrap
+        to the beginning 
+        
+        e.g. projectsData.length is 4. if current project index is 3 and then click next currentProjectIndex
+        becomes 4 -> then 4 % 4 = 0 wrapping back to the first project in the projectsDataArray*/
+        newIndex = (currentProjectIndex + 1) % projectsData.length
     } else if (direction === 'previous') {
-        newIndex = currentProjectIndex - 1
-        console.log(newIndex)
+        /* same as the next but we are adding projectData.length to keep the indices positive
+        currentProject - 1 decreases by 1 to go to the previous project
+
+        e.g. projectsData.length is 4 if you are at the last project then currentProjectIndex is 0
+
+        (0 - 1 + projectsData.length) = -1 + 4 -> 3
+
+        effectively going back to the last project
+        */
+        newIndex = (currentProjectIndex - 1 + projectsData.length) % projectsData.length;
     }
 
+    /* scroll to the top of the page once the user clicks either next or prev */
+    
     updateProjectPage(newIndex)
+    updateProjectNavBtn(newIndex)
+    
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
 }
 
 const updateProjectNavBtn = (project) => {
-    nextProjectName.innerText = projectsData[project + 1]?.["project name"];
-    prevProjectName.innerText = projectsData[project - 1]?.["project name"];
+    /* to update the text of the buttons as the user is clicking around using the same logic
+    as the projectNavigation function */
+    nextProjectName.innerText = projectsData[(project + 1) % projectsData.length]?.["project name"];
+    prevProjectName.innerText = projectsData[(project - 1 + projectsData.length) % projectsData.length]?.["project name"];
 }
 
 /* getting the prev and next buttons for navigation on the projects page 
