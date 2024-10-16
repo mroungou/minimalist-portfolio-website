@@ -88,7 +88,7 @@ const projectNavigation = (direction) => {
     
     updateProjectPage(newIndex)
     updateProjectNavBtn(newIndex)
-    
+
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
 }
 
@@ -109,13 +109,13 @@ document.getElementById('previous').addEventListener('click', () => {
     projectNavigation('previous')
 })
 
-updateProjectNavBtn(currentProjectIndex);
-updateProjectPage(currentProjectIndex)
 
-/* window.addEventListener('DOMContentLoaded', () => {
-
+window.addEventListener('DOMContentLoaded', () => {
+    
     if (currentProjectIndex !== null) {
+        updateProjectNavBtn(currentProjectIndex);
+        updateProjectPage(currentProjectIndex)
     } else {
         console.error('No project selected or project index is invalid')
     }
-}) */
+})

@@ -5,6 +5,11 @@
 @use 'contact';
 @use 'projects';
 
+.tablet, 
+.desktop {
+    display: none;
+}
+
 body {
     font-family: "Public Sans", sans-serif;
 }
@@ -26,7 +31,7 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     position: relative;
 
-    .mobile-menu {
+    .menu {
         display: flex;
         align-items: center;
         margin-left: auto;
@@ -171,7 +176,128 @@ footer {
 
     .socials {
         @include v.socials;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
         margin: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    header {
+        margin-bottom: 3rem;
+    }
+
+    main {
+        padding: 4rem 2.5rem 0;
+    }
+
+    nav {
+        grid-template-columns: repeat(2, auto);
+
+        .overlay {
+            display: flex;
+            flex-direction: row;
+            column-gap: 2.6rem;
+            position: static;
+            width: 100%;
+            padding: 0;
+            background: none;
+
+            a,a:visited {
+                color: c.$grayishDarkBlue;
+            }
+        }
+    }
+
+    body.index {
+        // the img and the text need to overlap
+        .hero {
+            display: grid;
+
+            h1 {
+                margin-top: 3.25rem;
+            }
+
+            .btn {
+                margin-top: 3.25rem;
+            }
+            
+            .text {
+                background: c.$veryLightGrey;
+                margin-top: auto;
+                height: fit-content;
+                width: 65%;
+                padding-right: 4rem;
+            }
+            
+            // makes them overlap
+            .hero-img, 
+            .text {
+                grid-area: -1/1;
+            }
+        }
+
+        .about { 
+            display: grid;
+            grid-template-columns: 17.563rem auto;
+            column-gap: 4.375rem;
+
+            h2 {
+                margin: 3rem 0 2rem;
+            }
+
+            .text {
+                margin-top: 0;
+            }
+
+            .btn-main {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .collab {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        h3 {
+            text-align: left;
+        }
+
+        .btn-main {
+            margin: auto 0 auto auto !important;
+        }
+    }
+
+    footer {
+        display: flex;
+        padding: 1.35rem 2.5rem;
+        column-gap: 3.5rem;
+        align-items: center;
+
+        .logo, .links {
+            margin-bottom: 0;
+        }
+
+        .links {
+            grid-template-columns: repeat(3, auto);
+            column-gap: 2.5rem;
+        }
+
+        .socials {
+            margin: 0 0 0 auto;
+            width: 15%;
+        }
     }
 }
 
