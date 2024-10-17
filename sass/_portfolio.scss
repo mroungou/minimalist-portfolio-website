@@ -16,6 +16,7 @@ body.portfolio {
 
     h2 {
         @include v.headings;
+        margin: 1.5rem 0;
     }
 
     p {
@@ -33,18 +34,32 @@ body.portfolio {
     }
 
     @media screen and (min-width: 768px) {
+        // creates the side by side look of the text and img div
         .project {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-gap: 4.375rem;
         }
 
+        h2 {
+            margin: 2.25rem 0;
+        }
+
+        // creates the alternating text and img design
+        .project:nth-child(2n) .text {
+            grid-area: 1;
+        }
+
         .text {
             margin-top: 0;
         }
-
+        // centers the img div vertically
         .project-img {
             align-content: center;
+        }
+
+        .btn-main {
+            margin: 2.25rem 0;
         }
     }
 }

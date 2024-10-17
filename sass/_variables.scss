@@ -20,6 +20,7 @@
     font-size: 0.938rem;
     color: c.$grayishDarkBlue;
     font-weight: 400;
+    margin: 0;
 }
 
 @mixin textBorders {
@@ -57,8 +58,12 @@
 }
 
 @mixin socials {
-   /*  display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%; */
+    width: 30%;
+
+    @media screen and (min-width: 768px) {
+        width: 15%;
+    }
 }

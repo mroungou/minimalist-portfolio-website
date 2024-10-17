@@ -31,11 +31,15 @@ const projectsData = [
         },
 
         'tablet': {
-
+            'hero-src': "./images/detail/tablet/image-manage-hero@2x.jpg",
+            'src-1': './images/detail/tablet/image-manage-preview-1@2x.jpg',
+            'src-2': './images/detail/tablet/image-manage-preview-2@2x.jpg',
         },
         
         'desktop': {
-
+            'hero-src': "./images/detail/desktop/image-manage-hero@2x.jpg",
+            'src-1': './images/detail/desktop/image-manage-preview-1@2x.jpg',
+            'src-2': './images/detail/desktop/image-manage-preview-2@2x.jpg',
         }
     },
 
@@ -53,11 +57,15 @@ const projectsData = [
         },
 
         'tablet': {
-
+            'hero-src': "./images/detail/tablet/image-bookmark-hero@2x.jpg",
+            'src-1': './images/detail/tablet/image-bookmark-preview-1@2x.jpg',
+            'src-2': './images/detail/tablet/image-bookmark-preview-2@2x.jpg',
         },
         
         'desktop': {
-
+            'hero-src': "./images/detail/desktop/image-bookmark-hero@2x.jpg",
+            'src-1': './images/detail/desktop/image-bookmark-preview-1@2x.jpg',
+            'src-2': './images/detail/desktop/image-bookmark-preview-2@2x.jpg',
         }
     },
 
@@ -75,11 +83,15 @@ const projectsData = [
         },
 
         'tablet': {
-
+            'hero-src': "./images/detail/tablet/image-insure-hero@2x.jpg",
+            'src-1': './images/detail/tablet/image-insure-preview-1@2x.jpg',
+            'src-2': './images/detail/tablet/image-insure-preview-2@2x.jpg',
         },
         
         'desktop': {
-
+            'hero-src': "./images/detail/desktop/image-insure-hero@2x.jpg",
+            'src-1': './images/detail/desktop/image-insure-preview-1@2x.jpg',
+            'src-2': './images/detail/desktop/image-insure-preview-2@2x.jpg',
         }
     },
 
@@ -97,11 +109,15 @@ const projectsData = [
         },
 
         'tablet': {
-
+            'hero-src': "./images/detail/tablet/image-fylo-hero@2x.jpg",
+            'src-1': './images/detail/tablet/image-fylo-preview-1@2x.jpg',
+            'src-2': './images/detail/tablet/image-fylo-preview-2@2x.jpg',
         },
         
         'desktop': {
-
+            'hero-src': "./images/detail/desktop/image-fylo-hero@2x.jpg",
+            'src-1': './images/detail/desktop/image-fylo-preview-1@2x.jpg',
+            'src-2': './images/detail/desktop/image-fylo-preview-2@2x.jpg',
         }
     },
 ]

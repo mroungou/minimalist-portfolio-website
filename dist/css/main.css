@@ -16,12 +16,14 @@ body.portfolio h2 {
   letter-spacing: -0.36px;
   color: rgb(51, 50, 61);
   line-height: 42px;
+  margin: 1.5rem 0;
 }
 body.portfolio p {
   line-height: 30px;
   font-size: 0.938rem;
   color: rgb(51, 50, 61);
   font-weight: 400;
+  margin: 0;
 }
 body.portfolio .text {
   margin-top: 2rem;
@@ -52,11 +54,20 @@ body.portfolio .btn-main a, body.portfolio .btn-main a:visited {
     -moz-column-gap: 4.375rem;
          column-gap: 4.375rem;
   }
+  body.portfolio h2 {
+    margin: 2.25rem 0;
+  }
+  body.portfolio .project:nth-child(2n) .text {
+    grid-area: 1;
+  }
   body.portfolio .text {
     margin-top: 0;
   }
   body.portfolio .project-img {
     align-content: center;
+  }
+  body.portfolio .btn-main {
+    margin: 2.25rem 0;
   }
 }
 
@@ -72,6 +83,7 @@ body.contact p {
   font-size: 0.938rem;
   color: rgb(51, 50, 61);
   font-weight: 400;
+  margin: 0;
 }
 body.contact .text {
   margin-top: 2rem;
@@ -80,11 +92,16 @@ body.contact .text {
   margin-top: 0;
 }
 body.contact .socials {
-  /*  display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: 30%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  body.contact .socials {
+    width: 15%;
+  }
 }
 
 .form {
@@ -115,7 +132,7 @@ input:focus, textarea:focus {
   border: 1px solid rgb(95, 180, 162);
 }
 
-.email, .name {
+.email, .name, .message {
   margin-bottom: 1.25rem;
 }
 
@@ -128,7 +145,6 @@ button {
   background: rgb(32, 58, 76);
   width: 200px;
   height: 48px;
-  margin-top: 2rem;
 }
 
 .has-error input, .has-error textarea {
@@ -142,6 +158,15 @@ button {
   margin-top: 0.25rem;
 }
 
+@media screen and (min-width: 768px) {
+  body.contact .socials {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .email, .name, .message {
+    margin-bottom: 1.5rem;
+  }
+}
 body.portfolio-index .project-prev-img img,
 body.portfolio-index .img-previews img {
   box-sizing: border-box;
@@ -160,6 +185,7 @@ body.portfolio-index p {
   font-size: 0.938rem;
   color: rgb(51, 50, 61);
   font-weight: 400;
+  margin: 0;
   margin: 0 0 1.5rem;
 }
 body.portfolio-index .text {
@@ -228,6 +254,10 @@ body.portfolio-index .project-nav {
 body.portfolio-index .project-nav .next {
   border-left: 1px solid rgb(220, 220, 222);
   align-items: end;
+  text-align: right;
+}
+body.portfolio-index .project-nav .previous {
+  text-align: left;
 }
 body.portfolio-index .btn-nav {
   box-sizing: border-box;
@@ -239,9 +269,7 @@ body.portfolio-index .btn-nav {
   height: fit-content;
   padding: 1.65rem 0;
   margin: 0;
-}
-body.portfolio-index .btn-nav img {
-  margin-bottom: 1rem;
+  row-gap: 1rem;
 }
 body.portfolio-index .btn-nav h3 {
   text-transform: capitalize;
@@ -261,6 +289,48 @@ body.portfolio-index .collab h3 {
   line-height: 42px;
   margin-block: 0;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  body.portfolio-index h1 {
+    margin: 0;
+  }
+  body.portfolio-index p, body.portfolio-index .btn {
+    margin-bottom: 0;
+  }
+  body.portfolio-index .tech-info {
+    margin: 1rem 0;
+  }
+  body.portfolio-index .tech-info p {
+    margin: 0;
+  }
+  body.portfolio-index .text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: dense;
+    padding: 2rem 0;
+  }
+  body.portfolio-index .text #project-summary {
+    grid-column: 2;
+    grid-row: 1/-1;
+  }
+  body.portfolio-index .text #project-name, body.portfolio-index .text .tech-info, body.portfolio-index .text .btn {
+    grid-column: 1;
+  }
+  body.portfolio-index .btn-nav {
+    flex-direction: row;
+    align-items: center;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  body.portfolio-index .project-nav .next {
+    justify-content: right;
+    align-items: center; /* the img needed to be on the right for the img so flex end was used push 
+it to the right. using center to vertically center it*/
+  }
+  body.portfolio-index .next .btn-img {
+    order: 2;
+  }
 }
 
 .tablet,
@@ -374,6 +444,7 @@ body.index .about p {
   font-size: 0.938rem;
   color: rgb(51, 50, 61);
   font-weight: 400;
+  margin: 0;
   font-size: 1rem;
   margin: 0;
 }
@@ -455,16 +526,21 @@ footer .links a, footer .links a:visited {
   letter-spacing: 2px;
   font-size: 0.75rem;
 }
-footer .socials {
-  /*  display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: 30%; */
+footer .socials-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 30%;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin: auto 0;
+}
+@media screen and (min-width: 768px) {
+  footer .socials-footer {
+    width: 15%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -475,7 +551,7 @@ footer .socials {
     display: block;
   }
   header {
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
   main {
     padding: 4rem 2.5rem 0;
@@ -557,7 +633,7 @@ footer .socials {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
-  footer .socials {
+  footer .socials-footer {
     margin: 0 0 0 auto;
     width: 15%;
   }

@@ -53,7 +53,7 @@ input, textarea {
     }
 }
 
-.email, .name {
+.email, .name, .message {
     margin-bottom: 1.25rem;
 }
 
@@ -61,7 +61,7 @@ input, textarea {
 
 button {
     @include v.greenBtn;
-    margin-top: 2rem;
+    // margin-top: 2rem;
 }
 
 .has-error {
@@ -75,5 +75,19 @@ button {
         font-weight: 700;
         font-style: italic;
         margin-top: .25rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    body.contact {
+        .socials {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .email, .name, .message {
+        margin-bottom: 1.5rem;
     }
 }

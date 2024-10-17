@@ -72,7 +72,12 @@ body.portfolio-index {
         .next {
             border-left: 1px solid rgba(220, 220, 222, 1);
             align-items: end;
+            text-align: right;
         }
+    }
+
+    .project-nav .previous {
+        text-align: left;
     }
     
     .btn-nav {
@@ -84,10 +89,7 @@ body.portfolio-index {
         height: fit-content;
         padding: 1.65rem 0;
         margin: 0;
-
-        img {
-            margin-bottom: 1rem;
-        }
+        row-gap: 1rem;
 
         h3 {
             text-transform: capitalize;
@@ -109,5 +111,59 @@ body.portfolio-index {
             text-align: center;
         }
     }
+
+    @media screen and (min-width: 768px) {
+        // removing styles from the mobile version
+        h1 {
+            margin: 0;
+        }
+
+        p, .btn {
+            margin-bottom: 0;
+        }
+
+        .tech-info {
+            margin: 1rem 0;
+
+            p {
+                margin: 0
+            }
+        }
+        // using grid to rearrange the layout
+        .text {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto auto;
+            grid-auto-flow: dense;
+            padding: 2rem 0;
+
+            #project-summary {
+                grid-column: 2;
+                grid-row: 1/-1;
+            }
+
+            #project-name, .tech-info, .btn {
+                grid-column: 1;
+            }
+        }
+        .btn-nav {
+            // previously direction column, now row
+            // there are 2 divs in the btn-nav - one for the img and the other for the text
+            flex-direction: row;
+            align-items: center;
+            column-gap: 2rem;
+        }
+
+
+        .project-nav .next {
+            justify-content: right; // pushing the content to the right side of the container
+            align-items: center; /* the img needed to be on the right for the img so flex end was used push 
+            it to the right. using center to vertically center it*/
+        }
+
+        .next .btn-img {
+            order: 2;
+        }
+    }    
 }
 

@@ -14,27 +14,24 @@
     <main>
         <header>
             <nav class="nav" id="nav">
-                <div class="logo" onclick="document.location.href='./index.html'"><img src="./images/logo.svg" alt="Logo"></div>
-                <div class="mobile-menu" id="menu-content">
-                <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
-                <div class="close-menu mobile" id="close-btn"><img src="./images/icons/close.svg" alt="Close Menu"></div>
-                <div class="mobile overlay" id="overlay">
-                    <a href="./index.html">Home</a>
-                    <a href="./portfolio.html">Portfolio</a>
-                    <a href="./contact.html">Contact Me</a>
-                </div>
+              <div class="logo" onclick="document.location.href='./index.html'"><img src="./images/logo.svg" alt="Logo"></div>
+              <div class="menu" id="menu-content">
+                  <div class="menu-btn mobile" id="menu-btn"><img src="./images/icons/hamburger.svg" alt="Menu"></div>
+                  <div class="close-menu mobile" id="close-btn"><img src="./images/icons/close.svg" alt="Close Menu"></div>
+                  <div class="overlay" id="overlay">
+                      <a href="./index.html">Home</a>
+                      <a href="./portfolio.html">Portfolio</a>
+                      <a href="./contact.html">Contact Me</a>
+                  </div>
               </div>
             </nav>
         </header>
         <div class="info">
             <section class="hero">
-                <div class="project-prev-img" id="project-hero-img">
-                </div>
+                <div class="project-prev-img" id="project-hero-img"></div>
                 <section class="text">
                     <h1 id="project-name"></h1>
-                   <p id="project-summary">
-                       
-                   </p>
+                    <p id="project-summary"></p>
                     <div class="tech-info">
                         <p>
                             Interaction Design / Front End Development
@@ -58,14 +55,18 @@
             </section>
             <nav class="project-nav">
                 <button class="previous btn-nav" id="previous">
-                    <img src="./images/icons/arrow-left.svg" alt="Previous Button" class="prev-btn" id="prev-btn">
-                    <h3 id="prev-project"></h3>
-                    <p>Previous Project</p>
+                    <div class="btn-img"><img src="./images/icons/arrow-left.svg" alt="Previous Button" class="prev-btn" id="prev-btn"></div>
+                    <div class="btn-text">
+                        <h3 id="prev-project"></h3>
+                        <p>Previous Project</p>
+                    </div>
                 </button>
                 <button class="next btn-nav" id="next">
-                    <img src="./images/icons/arrow-right.svg" alt="Next Button" class="next-btn" id="next-btn">
-                    <h3 id="next-project"></h3>
-                    <p>Next Project</p>
+                    <div class="btn-img"><img src="./images/icons/arrow-right.svg" alt="Next Button" class="next-btn" id="next-btn"></div>
+                    <div class="btn-text">
+                        <h3 id="next-project"></h3>
+                        <p>Next Project</p>
+                    </div>
                 </button>
             </nav>
         </div>
@@ -83,7 +84,7 @@
             <a href="./contact.html">Contact</a>
             <a href="./portfolio.html">Portfolio</a>
         </div>
-        <div class="socials">
+        <div class="socials-footer">
             <div class="git"><img src="./images/icons/git-white.svg" alt="Github"></div>
             <div class="twitter"><img src="./images/icons/twitter-white.svg" alt="Twitter"></div>
             <div class="linkedin"><img src="./images/icons/linkedin-white.svg" alt="LinkedIn"></div>

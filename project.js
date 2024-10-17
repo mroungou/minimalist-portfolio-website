@@ -33,9 +33,13 @@ const updateProjectPage = (project) => {
     const screenWidth = window.innerWidth
     
     if (screenWidth >= 1440) { // desktop screens
-        console.log('hello')
+        imgPreview1.src = projectsData[project].desktop["src-1"]
+        imgPreview2.src = projectsData[project].desktop["src-2"]
+        heroImg.src = projectsData[project].desktop["hero-src"]
     } else if (screenWidth >= 768) /* tablet screens */ {
-        console.log('hello')
+        imgPreview1.src = projectsData[project].tablet["src-1"]
+        imgPreview2.src = projectsData[project].tablet["src-2"]
+        heroImg.src = projectsData[project].tablet["hero-src"]
     } else { /* mobile screens */
         imgPreview1.src = projectsData[project].mobile["src-1"]
         imgPreview2.src = projectsData[project].mobile["src-2"]
@@ -109,6 +113,9 @@ document.getElementById('previous').addEventListener('click', () => {
     projectNavigation('previous')
 })
 
+window.addEventListener('resize', () => {
+    updateProjectPage(currentProjectIndex);
+})
 
 window.addEventListener('DOMContentLoaded', () => {
     

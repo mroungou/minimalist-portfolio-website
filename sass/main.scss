@@ -174,13 +174,13 @@ footer {
         }
     }
 
-    .socials {
+    .socials-footer {
         @include v.socials;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 30%;
-        margin: auto;
+        margin: auto 0;
     }
 }
 
@@ -194,7 +194,7 @@ footer {
     }
 
     header {
-        margin-bottom: 3rem;
+        margin-bottom: 3.5rem;
     }
 
     main {
@@ -294,7 +294,7 @@ footer {
             column-gap: 2.5rem;
         }
 
-        .socials {
+        .socials-footer {
             margin: 0 0 0 auto;
             width: 15%;
         }
