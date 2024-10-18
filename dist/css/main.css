@@ -367,7 +367,7 @@ nav .menu {
 nav #close-btn {
   display: none;
 }
-nav .overlay {
+nav .overlay ul {
   display: none;
   background: rgb(51, 50, 61);
   flex-direction: column;
@@ -379,6 +379,7 @@ nav .overlay {
   position: absolute;
   top: 100%;
   right: 0;
+  list-style: none;
 }
 nav .overlay a, nav .overlay a:visited {
   text-transform: uppercase;
@@ -559,7 +560,7 @@ footer .socials-footer {
   nav {
     grid-template-columns: repeat(2, auto);
   }
-  nav .overlay {
+  nav .overlay ul {
     display: flex;
     flex-direction: row;
     -moz-column-gap: 2.6rem;
@@ -569,7 +570,7 @@ footer .socials-footer {
     padding: 0;
     background: none;
   }
-  nav .overlay a, nav .overlay a:visited {
+  nav .overlay ul a, nav .overlay ul a:visited {
     color: rgb(51, 50, 61);
   }
   body.index .hero {
@@ -638,7 +639,7 @@ footer .socials-footer {
     width: 15%;
   }
 }
-.active .overlay {
+.active .overlay ul {
   display: flex;
 }
 .active #menu-btn {
@@ -646,4 +647,8 @@ footer .socials-footer {
 }
 .active #close-btn {
   display: block;
+}
+
+.nav-link[aria-current=page] {
+  color: rgb(95, 180, 162) !important;
 }/*# sourceMappingURL=main.css.map */
