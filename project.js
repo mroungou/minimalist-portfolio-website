@@ -14,7 +14,7 @@ const prevProjectName = document.getElementById('prev-project');
 // retrieving the project index from the session storage
 let currentProjectIndex = parseInt(sessionStorage.getItem('selectedProject'));
 
-const updateProjectPage = (project) => {
+const updateProjectPage = (project = 0) => {
     // removing all existing text and images;
     projectName.innerText = '';
     projectSummary.innerText = '';
@@ -96,7 +96,7 @@ const projectNavigation = (direction) => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
 }
 
-const updateProjectNavBtn = (project) => {
+const updateProjectNavBtn = (project = 0) => {
     /* to update the text of the buttons as the user is clicking around using the same logic
     as the projectNavigation function */
     nextProjectName.innerText = projectsData[(project + 1) % projectsData.length]?.["project name"];

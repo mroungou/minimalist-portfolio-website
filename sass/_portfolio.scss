@@ -52,6 +52,7 @@ body.portfolio {
 
         .text {
             margin-top: 0;
+            width: 17.563rem;
         }
         // centers the img div vertically
         .project-img {
@@ -60,6 +61,30 @@ body.portfolio {
 
         .btn-main {
             margin: 2.25rem 0;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        p {
+            font-size: 1rem;
+        }
+
+        .text {
+            padding: 3.438rem 0;
+            width: 21.875rem;
+        }
+
+        .project:nth-child(2n) .text {
+            margin-left: auto;
+        }
+
+        .project-img {
+            width: 33.75rem;
+            justify-content: left;
+        }
+
+        .project {
+            column-gap: 7.813rem;
         }
     }
 }

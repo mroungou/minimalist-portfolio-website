@@ -62,12 +62,33 @@ body.portfolio .btn-main a, body.portfolio .btn-main a:visited {
   }
   body.portfolio .text {
     margin-top: 0;
+    width: 17.563rem;
   }
   body.portfolio .project-img {
     align-content: center;
   }
   body.portfolio .btn-main {
     margin: 2.25rem 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body.portfolio p {
+    font-size: 1rem;
+  }
+  body.portfolio .text {
+    padding: 3.438rem 0;
+    width: 21.875rem;
+  }
+  body.portfolio .project:nth-child(2n) .text {
+    margin-left: auto;
+  }
+  body.portfolio .project-img {
+    width: 33.75rem;
+    justify-content: left;
+  }
+  body.portfolio .project {
+    -moz-column-gap: 7.813rem;
+         column-gap: 7.813rem;
   }
 }
 
@@ -97,6 +118,7 @@ body.contact .socials {
   justify-content: space-between;
   width: 30%;
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   body.contact .socials {
@@ -165,6 +187,26 @@ button {
   }
   .email, .name, .message {
     margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body.contact p {
+    font-size: 1rem;
+  }
+  body.contact .text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 0;
+  }
+  body.contact .text .socials {
+    grid-column: 2;
+    width: 18%;
+    margin-bottom: 0;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 0;
   }
 }
 body.portfolio-index .project-prev-img img,
@@ -332,10 +374,38 @@ it to the right. using center to vertically center it*/
     order: 2;
   }
 }
+@media screen and (min-width: 1440px) {
+  body.portfolio-index .info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    -moz-column-gap: 7.813rem;
+         column-gap: 7.813rem;
+  }
+  body.portfolio-index .text {
+    padding: 3rem 0;
+    grid-template-columns: 1fr;
+    grid-row: 1/-1;
+  }
+  body.portfolio-index .text #project-summary {
+    margin: 1.25rem 0;
+    grid-column: 1;
+  }
+  body.portfolio-index .text .tech-info {
+    margin-bottom: 1.5rem;
+  }
+  body.portfolio-index .text .tech-info .tech {
+    margin-top: 1rem;
+  }
+}
 
 .tablet,
 .desktop {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -536,7 +606,7 @@ footer .socials-footer {
   align-items: center;
   justify-content: space-between;
   width: 30%;
-  margin: auto 0;
+  margin: auto;
 }
 @media screen and (min-width: 768px) {
   footer .socials-footer {
@@ -576,13 +646,11 @@ footer .socials-footer {
   body.index .hero {
     display: grid;
   }
-  body.index .hero h1 {
-    margin-top: 3.25rem;
-  }
   body.index .hero .btn {
     margin-top: 3.25rem;
   }
   body.index .hero .text {
+    padding-top: 1.75rem;
     background: rgb(250, 250, 250);
     margin-top: auto;
     height: -moz-fit-content;
@@ -637,6 +705,50 @@ footer .socials-footer {
   footer .socials-footer {
     margin: 0 0 0 auto;
     width: 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .tablet {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  main {
+    padding: 4rem 10.25rem 0;
+  }
+  body.index .hero h1 {
+    font-size: 3.125rem;
+    line-height: 50px;
+    letter-spacing: -0.45px;
+  }
+  body.index .hero .text {
+    width: 35%;
+  }
+  body.index .about {
+    grid-template-columns: 33.75rem 21.875rem;
+    -moz-column-gap: 7.813rem;
+         column-gap: 7.813rem;
+  }
+  .collab {
+    grid-template-columns: 1fr 2fr;
+  }
+  .collab h3 {
+    position: relative;
+  }
+  .collab h3:after {
+    content: "";
+    border-bottom: 1px solid rgb(220, 220, 222);
+    width: 534px;
+    position: absolute;
+    bottom: 45%;
+    left: 100%;
+  }
+  footer {
+    padding: 1.35rem 10.25rem;
+  }
+  footer .socials-footer {
+    width: 10%;
   }
 }
 .active .overlay ul {
