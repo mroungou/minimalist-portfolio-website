@@ -399,6 +399,15 @@ it to the right. using center to vertically center it*/
   }
 }
 
+.box {
+  transition: opacity 10000ms;
+  will-change: opacity;
+}
+
+.faded-out {
+  opacity: 0;
+}
+
 .tablet,
 .desktop {
   display: none;

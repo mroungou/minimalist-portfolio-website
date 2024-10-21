@@ -194,3 +194,12 @@ body.portfolio-index {
     }
 }
 
+.box {
+    transition: opacity 10000ms;
+    will-change: opacity;
+}
+
+.faded-out {
+    opacity: 0;
+}
+

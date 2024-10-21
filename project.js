@@ -45,8 +45,7 @@ const updateProjectPage = (project = 0) => {
         imgPreview2.src = projectsData[project].mobile["src-2"]
         heroImg.src = projectsData[project].mobile["hero-src"]
     }
-
-    
+     
     projectName.innerText = projectsData[project]["project name"];
     projectSummary.innerText = projectsData[project]["project summary"];
     techUsed.innerText = projectsData[project].technologies;
