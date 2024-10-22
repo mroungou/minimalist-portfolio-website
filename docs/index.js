@@ -197,19 +197,33 @@ viewProjectBtn?.forEach((btn, index) => {
 
 })
 
+// document.querySelectorAll('.nav-link').forEach(link => {
+//     /* this makes sure that the portfolio link remains active if user is on the portfolio page
+//     or on any of the project pages
+    
+//     -> checks first if the link includes portfolio and the current url has project in it
+//     if that's the case it'll then set the aria-current
+    
+//     -> for else state it will look for exact matches i.e. home, contact and portfolio as they look
+//     for exact matches*/
+//     if (link.href.includes('portfolio') && window.location.href.includes('project')) {
+//         link.setAttribute('aria-current', 'page');
+//     } else if (link.href === window.location.href) {
+//         link.setAttribute('aria-current', 'page')
+//     }
+// }); 
+
 document.querySelectorAll('.nav-link').forEach(link => {
-    /* this makes sure that the portfolio link remains active if user is on the portfolio page
-    or on any of the project pages
+    const currentPath = window.location.pathname; // Only the path part of the URL, not the full URL
+    const linkPath = new URL(link.href).pathname; // Extract the path from each link
     
-    -> checks first if the link includes portfolio and the current url has project in it
-    if that's the case it'll then set the aria-current
-    
-    -> for else state it will look for exact matches i.e. home, contact and portfolio as they look
-    for exact matches*/
-    if (link.href.includes('portfolio') && window.location.href.includes('project')) {
+    // Check if we're on a portfolio project page (assuming '/project' is part of the path)
+    if (linkPath.includes('portfolio') && currentPath.includes('project')) {
         link.setAttribute('aria-current', 'page');
-    } else if (link.href === window.location.href) {
-        link.setAttribute('aria-current', 'page')
+    }
+    // Otherwise, check if the link matches exactly with the current path
+    else if (linkPath === currentPath || linkPath === `.${currentPath}`) {
+        link.setAttribute('aria-current', 'page');
     }
 });
 
