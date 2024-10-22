@@ -107,9 +107,6 @@ To use it as my own I would make sure that the message that the user inputs woul
 ### Useful resources
 
 - [Maintaining an alternating pattern across a responsive grid](https://dev.to/thedamon/maintaining-a-pattern-across-a-responsive-grid-4j2b) - this helped me out using the nth child selector for the alternating grid layout for the portfolio page instead of hard coding
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-
 
 ## Author
 - Twitter - [@mroungou](https://x.com/mroungou)

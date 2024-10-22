@@ -332,6 +332,7 @@ body.portfolio-index .collab h3 {
   margin-block: 0;
   text-align: center;
 }
+
 @media screen and (min-width: 768px) {
   body.portfolio-index h1 {
     margin: 0;
@@ -373,6 +374,9 @@ it to the right. using center to vertically center it*/
   body.portfolio-index .next .btn-img {
     order: 2;
   }
+  body.portfolio-index .collab h3 {
+    text-align: left;
+  }
 }
 @media screen and (min-width: 1440px) {
   body.portfolio-index .info {
@@ -398,7 +402,6 @@ it to the right. using center to vertically center it*/
     margin-top: 1rem;
   }
 }
-
 .box {
   transition: opacity 10000ms;
   will-change: opacity;

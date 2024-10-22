@@ -221,9 +221,9 @@ closeMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('active')
 })
 
-window.addEventListener('click', () => {
+/* window.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
-})
+}) */
 
 form?.addEventListener('submit', (e) => {
     e.preventDefault()

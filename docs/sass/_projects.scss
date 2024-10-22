@@ -111,8 +111,11 @@ body.portfolio-index {
             text-align: center;
         }
     }
+}
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+
+    body.portfolio-index {
         // removing styles from the mobile version
         h1 {
             margin: 0;
@@ -164,26 +167,33 @@ body.portfolio-index {
         .next .btn-img {
             order: 2;
         }
-    }   
-    
-    @media screen and (min-width: 1440px) {
+
+        .collab h3 {
+            text-align: left;
+        }
+    }
+}   
+
+@media screen and (min-width: 1440px) {
+
+    body.portfolio-index {
         .info {
             display: grid;
             grid-template-columns: 1fr 2fr;
             grid-template-rows: auto auto;
             column-gap: 7.813rem;
         }
-
+    
         .text {
             padding: 3rem 0;
             grid-template-columns: 1fr;
             grid-row: 1/-1;
-
+    
             #project-summary {
                 margin: 1.25rem 0;
                 grid-column: 1;
             }
-
+    
             .tech-info {
                 margin-bottom: 1.5rem;
                 .tech {
@@ -191,6 +201,7 @@ body.portfolio-index {
                 }
             }
         }    
+
     }
 }
 
