@@ -206,21 +206,10 @@ document.querySelectorAll('.nav-link').forEach(link => {
     
     -> for else state it will look for exact matches i.e. home, contact and portfolio as they look
     for exact matches*/
-    // if (link.href.includes('portfolio') && window.location.href.includes('project')) {
-    //     link.setAttribute('aria-current', 'page');
-    // } else if (link.href === window.location.href) {
-    //     link.setAttribute('aria-current', 'page')
-    // }
-
-    const currentPath = window.location.pathname;
-    
-    // Checking if it's a portfolio/project page
-    if (link.href.includes('portfolio') && currentPath.includes('project')) {
+    if (link.href.includes('portfolio') && window.location.href.includes('project')) {
         link.setAttribute('aria-current', 'page');
-    } 
-    // Exact match for other links like Home or Portfolio
-    else if (link.getAttribute('href') === currentPath || link.getAttribute('href') === `.${currentPath}`) {
-        link.setAttribute('aria-current', 'page');
+    } else if (link.href === window.location.href) {
+        link.setAttribute('aria-current', 'page')
     }
 });
 
