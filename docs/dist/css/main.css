@@ -105,6 +105,7 @@ body.contact p {
   color: rgb(51, 50, 61);
   font-weight: 400;
   margin: 0;
+  letter-spacing: 0;
 }
 body.contact .text {
   margin-top: 2rem;
@@ -165,8 +166,8 @@ button {
   color: rgb(255, 255, 255);
   border: none;
   background: rgb(32, 58, 76);
-  width: 200px;
-  height: 48px;
+  width: 201px;
+  height: 49px;
 }
 
 .has-error input, .has-error textarea {
@@ -433,7 +434,7 @@ main {
 }
 
 header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.2rem;
 }
 
 nav {
@@ -472,7 +473,7 @@ nav .overlay a, nav .overlay a:visited {
 }
 
 body.index .hero h1 {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
   margin-bottom: 0;
   font-size: 2.5rem;
   font-weight: 700;
@@ -491,11 +492,11 @@ body.index .hero .btn {
   color: rgb(255, 255, 255);
   border: none;
   background: rgb(32, 58, 76);
-  width: 200px;
-  height: 48px;
+  width: 201px;
+  height: 49px;
   display: flex;
   align-items: center;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   background: rgb(32, 58, 76);
   padding: 0;
 }
@@ -520,7 +521,7 @@ body.index .about h2 {
   color: rgb(51, 50, 61);
   line-height: 42px;
   margin-block: 0;
-  margin: 2rem 0;
+  margin: 2rem 0 1.8rem;
 }
 body.index .about p {
   line-height: 30px;
@@ -559,7 +560,7 @@ body.index .about .btn-main a, body.index .about .btn-main a:visited {
 }
 
 .collab {
-  margin: 6rem 0;
+  margin: 6.3rem 0 4.9rem;
 }
 .collab h3 {
   font-size: 2.5rem;
@@ -592,7 +593,7 @@ body.index .about .btn-main a, body.index .about .btn-main a:visited {
 footer {
   background: rgb(51, 50, 61);
   text-align: center;
-  padding: 3.25rem 0;
+  padding: 3.55rem 0;
 }
 footer .logo,
 footer .links {

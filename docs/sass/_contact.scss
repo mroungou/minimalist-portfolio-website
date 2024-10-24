@@ -9,6 +9,7 @@ body.contact {
     
     p {
         @include v.paragraphs;
+        letter-spacing: 0
     }
 
     .text {
